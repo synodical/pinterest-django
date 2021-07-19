@@ -1,2 +1,2 @@
 # pinterest_django
-clone coding project of pinterest in django
+Clone coding project of PINTEREST in Django
