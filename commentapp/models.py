@@ -11,4 +11,4 @@ class Comment(models.Model):
 
     content = models.TextField(null=False)
 
-    created_At = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now=True)
