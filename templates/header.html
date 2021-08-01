@@ -1,28 +1,28 @@
 
-    <div class="header">
+    <div class="awesome_header">
         <div>
-            <h1 class="logo">LEE'S AWESOME</h1>
+            <h1 class="awesome_logo">LEE'S AWESOME</h1>
         </div>
 
-        <div>
-            <a href="{% url 'articleapp:list' %}">
+        <div class="awesome_header_navbar">
+            <a href="{% url 'articleapp:list' %}" class="awesome_header_nav">
                 <span>Articles</span>
             </a>
-            <a href="{% url 'projectapp:list' %}">
+            <a href="{% url 'projectapp:list' %}" class="awesome_header_nav">
                 <span>Projects</span>
             </a>
             {% if not user.is_authenticated %}
-            <a href="{% url 'accountapp:login' %}?next={{ request.path }}">
+            <a href="{% url 'accountapp:login' %}?next={{ request.path }}" class="awesome_header_nav" >
                 <span>login</span>
             </a>
-            <a href="{% url 'accountapp:create' %}">
+            <a href="{% url 'accountapp:create' %}" class="awesome_header_nav" >
                 <span>SignUp</span>
             </a>
             {% else %}
-            <a href="{% url 'accountapp:detail' pk=user.pk %}">
+            <a href="{% url 'accountapp:detail' pk=user.pk %}" class="awesome_header_nav">
                 <span>MyPage</span>
             </a>
-            <a href="{% url 'accountapp:logout' %}?next={{ request.path }}">
+            <a href="{% url 'accountapp:logout' %}?next={{ request.path }}" class="awesome_header_nav" >
                 <span>logout</span>
             </a>
             {% endif %}
